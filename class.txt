@@ -1,0 +1,65 @@
+    private String name;
+    private double totalGrade;
+    
+    public Student() {}
+    
+    public Student(String n, double tg)
+    {
+        name=n;
+        totalGrade=tg;
+    }
+    
+    public void setName(String n)
+    {
+        name=n;
+    }
+    public String getName()
+    {
+        return name;
+    }
+    public String getLetterGrade()
+    {
+        double g=totalGrade;
+        String letterGrade="";
+        
+        if (g>=100.0)
+            letterGrade="A+";
+        else if (g>=93.0 && g<=99.0)
+            letterGrade="A";
+        else if (g>=92.0 && g<=93.0)
+            letterGrade="A-";
+        else if (g>=87.0 && g<=89.0)
+            letterGrade="B+";
+        else if (g>=83.0 && g<=86.0)
+            letterGrade="B";
+        else if (g>=80.0 && g<=82.0)
+            letterGrade="B-";
+        else if (g>=77.0 && g<=79.0)
+            letterGrade="C+";
+        else if (g>=73.0 && g<=76.0)
+            letterGrade="C";
+        else if (g>=70.0 && g<=72.0)
+            letterGrade="C-";
+        else if (g>=67.0 && g<=69.0)
+            letterGrade="D+";
+        else if (g>=63.0 && g<=66.0)
+            letterGrade="D";
+        else if (g>=60.0 && g<=62.0)
+            letterGrade="D-";
+        else if (g>=0.0 && g<=59.0)
+            letterGrade="F";
+              
+        return letterGrade;
+    }
+    public void addGrade(double g)
+    {
+        totalGrade=totalGrade+g;
+    }
+    public double calcAverage()
+    {
+        double average=0.0;
+        average = totalGrade/10.0;
+        return average;
+    }
+    
+}
